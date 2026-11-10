@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Lenis from 'lenis';
 import { Preloader } from './components/ui/Preloader';
 import { CustomCursor } from './components/ui/CustomCursor';
@@ -15,6 +15,8 @@ import { FaqAccordion } from './components/ui/FaqAccordion';
 import { FooterCTA } from './components/ui/FooterCTA';
 
 export default function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     // Initialize Lenis smooth scroll for fluid editorial motion
     const lenis = new Lenis({
@@ -46,7 +48,7 @@ export default function App() {
   return (
     <div className="relative min-h-screen bg-[#faf6f0] text-[#1c1917] font-sans selection:bg-[#d9654c] selection:text-[#faf6f0]">
       {/* Editorial Loading Screen matching lamagadan.studio */}
-      <Preloader />
+      <Preloader onComplete={() => setIsLoaded(true)} />
 
       {/* Editorial Film Grain Noise Overlay */}
       <div className="noise-overlay" />

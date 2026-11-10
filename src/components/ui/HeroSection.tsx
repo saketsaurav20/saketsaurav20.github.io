@@ -9,6 +9,7 @@ import {
   FloatingBadge2,
   FloatingBadge3
 } from './StudioIllustrations';
+import { AnimatedCharacter } from './AnimatedCharacter';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -37,6 +38,11 @@ export const HeroSection: React.FC = () => {
       </div>
       <div className="hidden xl:block absolute top-1/2 right-24 animate-float">
         <FloatingBadge3 />
+      </div>
+
+      {/* Animated Character — positioned right in between UiPath badge and WDIO badge */}
+      <div className="hidden lg:block absolute top-[35%] right-20 xl:right-28 w-36 h-36 z-25">
+        <AnimatedCharacter className="w-full h-full" />
       </div>
 
       {/* Centered Main Hero Block */}
