@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { Send, Menu, X } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -95,7 +95,7 @@ export const Navbar: React.FC = () => {
             className="studio-btn px-6 py-2.5 rounded-full border border-[#1c1917] bg-[#1c1917] text-[#faf6f0] text-xs font-sans font-semibold tracking-wider uppercase hover:bg-[#d9654c] hover:border-[#d9654c] group"
           >
             <span className="whitespace-nowrap">Let's Talk</span>
-            <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
+            <Send size={14} aria-hidden="true" className="plane-icon-loop shrink-0" />
           </a>
         </div>
 
